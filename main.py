@@ -8,11 +8,8 @@ app = Flask(__name__, static_folder='images')
 html_template = '''
 <html>
     <body>
-        <p style = "font-family:helvetica">
-        Antimicrobial Resistance (AMR) Data for Klebsiella pneumoniae <br />
-        <br /> 
-        Please choose a country <br />
-        </p>
+        <h1>Antimicrobial Resistance (AMR) Data for Klebsiella pneumoniae</h1>
+        <h3>Please choose a country</h3>
         <form method='POST' action='/show' >
             <select name='selected_country'> 
             {countries}
@@ -50,7 +47,7 @@ def create_plot(country):
     plt.ylim(-5,105)
     plt.ylabel('Percentage') 
     plt.xlabel('Year')
-    plt.title('AMR for K. pneumoniae in {}'.format(country))
+    plt.title('K. pneumoniae AMR in {}'.format(country))
     plt.tight_layout()
     
     img = BytesIO()
