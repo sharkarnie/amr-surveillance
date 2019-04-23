@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO
 
-app = Flask(__name__, static_folder='images') 
+app = Flask(__name__, static_folder='images')
 
 html_template = '''
 <html>
@@ -11,7 +11,7 @@ html_template = '''
         <h1>Antimicrobial Resistance (AMR) Data for Klebsiella pneumoniae</h1>
         <h3>Please choose a country</h3>
         <form method='POST' action='/show' >
-            <select name='selected_country'> 
+            <select name='selected_country'>
             {countries}
             </select>
             <input type='submit' />
@@ -45,19 +45,19 @@ def create_plot(country):
             legend_entries.append(antibiotic)
     plt.legend(legend_entries, bbox_to_anchor=(1.05, 1.0))
     plt.ylim(-5,105)
-    plt.ylabel('Percentage') 
+    plt.ylabel('Percentage')
     plt.xlabel('Year')
     plt.title('K. pneumoniae AMR in {}'.format(country))
     plt.tight_layout()
-    
+
     img = BytesIO()
     plt.savefig(img)
     img.seek(0)
-    
+
     return send_file(img, mimetype='image/png')
 
-@app.route('/') 
-def index_page(): 
+@app.route('/')
+def index_page():
     response = html_template.format(countries=new_c_str, show='')
     return response
 
@@ -68,5 +68,5 @@ def show_resistance():
     response = html_template.format(countries=new_c_str, show=figure)
     return response
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     app.run(debug=True)
