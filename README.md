@@ -7,7 +7,7 @@ Antimicrobial drugs are used to target and destroy bacterial, viral, fungal and 
 
 Antimicrobial resistance surveillance data collected by the pharmaceutical industry was made available as part of the Wellcome data re-use prize competition (https://www.synapse.org/#!Synapse:syn17009517/wiki/585654).
 
-The aim here was to create a web application for the visualisation of AMR data. As a prototype, initial efforts were focused on a subset of the data. This subset was relevant to the visualisation of longitudinal Klebsiella pneumoniae resistance data only.
+The aim here was to create a web application for the visualisation of AMR data. As a prototype, initial efforts were focused on a subset of the data relevant to Klebsiella pneumoniae resistance. 
 
 #### Instructions
 1. Get the repo
