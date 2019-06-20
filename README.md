@@ -1,6 +1,6 @@
 # AMR Surveillance Web App
 
-This is a simple Flask app to visualise antibmicrobial resistance data by country for Klebsiella pneumoniae.
+This is a simple Flask app to visualise antimicrobial resistance data by country for Klebsiella pneumoniae.
 
 #### Overview
 Antimicrobial drugs are used to target and destroy bacterial, viral, fungal and parasitic pathogens. Resistance occurs when pathogens evolve or adapt, resulting in reduced or no susceptibility to antimicrobial treatment.  
